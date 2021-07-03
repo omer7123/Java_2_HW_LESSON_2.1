@@ -5,10 +5,10 @@ public class Main {
     public static String className;
 
     public static void main(String[] args) {
-        createObject("Porsche").print();
-        createObject("Mercedes").print();
-        createObject("Tesla").print();
-
+        Car[] car = {createObject("Porsche"), createObject("Mercedes"),createObject("Tesla")};
+        for (int i = 0; i < car.length; i++) {
+            car[i].print();
+        }
     }
 
     public static Car createObject(String className) {
